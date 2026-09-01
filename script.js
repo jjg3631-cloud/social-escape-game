@@ -4,7 +4,7 @@
 ================================ */
 
 const GOOGLE_SCRIPT_URL =
-  "여기에_구글앱스스크립트_URL_입력";
+  "https://script.google.com/macros/s/AKfycbz5q99AR50eMPkvfH8SL0qKO7hGi9bqkSadCBmm29l_gWz0RyW7RaKi-YcC1TrPcm9FDg/exec";
 
 
 /* ==============================
