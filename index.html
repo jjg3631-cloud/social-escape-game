@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>도망쳐! 사회적 지위 탈출</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game-container">
+
+  <!-- 시작 화면 -->
+  <section id="startScreen" class="screen active">
+
+    <div class="title-box">
+
+      <div class="alarm">🚨 방 탈 출 🚨</div>
+
+      <h1>
+        도망쳐!<br>
+        <span>사회적 지위 탈출</span>
+      </h1>
+
+      <p class="story">
+        수상한 선생님 캐릭터가<br>
+        여러분을 교실 밖으로 내보내지 않으려 합니다! 😡
+      </p>
+
+      <p class="rule">
+        문제를 맞히면 추격자가 멀어지고,<br>
+        틀리면 점점 가까워집니다!
+      </p>
+
+      <p class="escape-rule">
+        🔑 15문제 중 10문제 이상 맞히면 탈출 성공!
+      </p>
+
+      <input
+        id="nickname"
+        type="text"
+        placeholder="이름 또는 닉네임 입력"
+        maxlength="20"
+      >
+
+      <button onclick="startGame()">
+        게임 시작
+      </button>
+
+    </div>
+
+    <div class="character start-character">
+      🤓😡
+      <div>잡으러 간다!</div>
+    </div>
+
+  </section>
+
+
+
+  <!-- 게임 화면 -->
+  <section id="gameScreen" class="screen">
+
+    <div class="top-bar">
+
+      <div id="progressText">
+        문제 1 / 15
+      </div>
+
+      <div id="scoreText">
+        정답 0
+      </div>
+
+    </div>
+
+
+    <!-- 문제 -->
+    <div class="question-box">
+
+      <div id="category" class="category"></div>
+
+      <h2 id="question">
+        문제 내용
+      </h2>
+
+      <div id="choices" class="choices"></div>
+
+    </div>
+
+
+
+    <!-- 추격 애니메이션 영역 -->
+    <div class="chase-area">
+
+      <div class="escape-door">
+        🚪
+        <span>출구</span>
+      </div>
+
+      <div class="road"></div>
+
+      <div id="player" class="player">
+        🏃
+      </div>
+
+      <div id="chaser" class="chaser">
+        🤓😡
+      </div>
+
+    </div>
+
+
+    <div class="danger-box">
+
+      <div>
+        추격 위험도
+      </div>
+
+      <div class="danger-bar">
+
+        <div id="dangerFill"></div>
+
+      </div>
+
+      <div id="dangerText">
+        아직 안전합니다!
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- 결과 화면 -->
+  <section id="resultScreen" class="screen">
+
+    <div id="resultBox" class="result-box">
+
+      <h1 id="resultTitle"></h1>
+
+      <div id="resultCharacter"
+           class="result-character">
+      </div>
+
+      <p id="resultMessage"></p>
+
+      <div class="result-score">
+
+        <div>
+          <span>맞힌 문제</span>
+          <strong id="finalScore"></strong>
+        </div>
+
+        <div>
+          <span>탈출 조건</span>
+          <strong>10문제 이상</strong>
+        </div>
+
+      </div>
+
+      <button onclick="restartGame()">
+        다시 도전하기
+      </button>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
